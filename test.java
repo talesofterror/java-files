@@ -27,8 +27,8 @@ public class test {
         go away???
         */
 
-        // System.out.println(input + " + " + input2 + " = " + Integer.parseInt(input) + Integer.parseInt(input2));
-        System.out.println(Integer.parseInt(input) + Integer.parseInt(input2));
+        System.out.println(input + " plus " + input2 + " equals " + Integer.parseInt(input) + Integer.parseInt(input2));
+        // System.out.println(Integer.parseInt(input) + Integer.parseInt(input2));
 
         /*
         Alright, this is fucked up. Now when I add the strings printing the sum operations
