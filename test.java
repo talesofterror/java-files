@@ -27,12 +27,16 @@ public class test {
         go away???
         */
 
-        System.out.println(input + " plus " + input2 + " equals " + Integer.parseInt(input) + Integer.parseInt(input2));
+        System.out.print(input + " plus " + input2 + " equals ");
+        System.out.println(Integer.parseInt(input) + Integer.parseInt(input2));
         // System.out.println(Integer.parseInt(input) + Integer.parseInt(input2));
 
         /*
         Alright, this is fucked up. Now when I add the strings printing the sum operations
         for ease of viewing, the parsing at the end doesn't work. WHY
+
+        ok. I've been told that it's because you can't use more than one data type with the 
+        + operator
         */
 
         restart();
