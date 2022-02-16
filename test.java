@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class test {     
     static Scanner scanner = new Scanner(System.in);
+    static test test = new test();
 
     public static void main(String[] args) {
 

@@ -4,6 +4,11 @@ public class list {
     static list ll = new list();
     
     public void append (int data){
+        if (head==null){
+            head = new Node(data);
+            return;
+        }
+        
         Node current = head;
 
         while (current.next != null){
