@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Node {
     Node next;
-    static list ll = new list();
+    // static list ll = new list();
     static Scanner scanner = new Scanner(System.in);
 
     int data;
