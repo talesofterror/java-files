@@ -1,16 +1,55 @@
+import java.util.Scanner;
+
 public class list {
 
-    Node head;
-    static list ll = new list();
+    static Scanner scanner = new Scanner(System.in);
+
+    static class Node {
+        Node next;
+        // static list ll = new list();
+        static Scanner scanner = new Scanner(System.in);
     
-
-    public static void main(String[] args){
-        
-
-        System.out.println(this.data);;
+        String data;
+    
+        public Node (String data){
+            this.data = data;
+            next = null;
+        }
+    
+    
+    
     }
 
-    public void append (int data){
+    Node head;
+
+    public static void main(String[] args){
+
+        list ll = new list();
+
+        System.out.println("Type 'append' to append data to the list.");
+        System.out.println("Type 'readCurrent' to recall node data");
+
+        var input = scanner.next();
+        
+        if (input == "append"){
+            System.out.println("Enter data to append.");
+            var appendValue = scanner.next();
+            ll.append(appendValue);
+            System.out.println(appendValue + "added to the linked list.");
+            return;
+        }
+
+        if (input == "readCurrent") {
+            System.out.println("Current node is " + ll.head.data);
+            return;
+        }
+
+    }
+
+    ////// METHODS //////
+
+    public void append (String data){
+
         if (head==null){
             head = new Node(data);
             return;
@@ -25,13 +64,15 @@ public class list {
         current.next = new Node(data);
     }
 
-    public void prepend(int data) {
+    public void prepend(String data) {
+
         Node newHead = new Node(data);
         newHead.next = head;
         head = newHead;
     }
 
-    public void deleteWithValue(int data) {
+    public void deleteWithValue(String data) {
+
         if (head == null) return;
         if (head.data == data){
             head = head.next;
@@ -46,6 +87,10 @@ public class list {
             }
             current = current.next;
         }
+    }
+
+    public void readCurrent(String data){
+        
     }
 
 }
