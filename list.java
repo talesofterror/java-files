@@ -29,21 +29,26 @@ public class list {
         System.out.println("Type 'append' to append data to the list.");
         System.out.println("Type 'readCurrent' to recall node data");
 
-        var input = scanner.next();
+        inputHandler(ll);
+    }
+
+    private static void inputHandler(list ll) {
+        var input = scanner.nextLine();
+        // scanner.nextLine();
         
-        if (input == "append"){
+        if ("append".equals(input)){
             System.out.println("Enter data to append.");
-            var appendValue = scanner.next();
+            var appendValue = scanner.nextLine();
+            // scanner.nextLine();
             ll.append(appendValue);
             System.out.println(appendValue + "added to the linked list.");
-            return;
+            inputHandler(ll);
         }
 
-        if (input == "readCurrent") {
+        if ("readCurrent".equals(input)) {
             System.out.println("Current node is " + ll.head.data);
-            return;
+            inputHandler(ll);
         }
-
     }
 
     ////// METHODS //////
