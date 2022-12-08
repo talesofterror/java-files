@@ -1,3 +1,6 @@
+
+// must use terminal command "java list.java" for proper operation!
+
 import java.util.Scanner;
 
 public class list {
@@ -34,19 +37,22 @@ public class list {
 
     private static void inputHandler(list ll) {
         var input = scanner.nextLine();
-        // scanner.nextLine();
-        
+                
         if ("append".equals(input)){
             System.out.println("Enter data to append.");
             var appendValue = scanner.nextLine();
-            // scanner.nextLine();
             ll.append(appendValue);
-            System.out.println(appendValue + "added to the linked list.");
+            System.out.println(appendValue + " added to the linked list.");
             inputHandler(ll);
         }
 
         if ("readCurrent".equals(input)) {
             System.out.println("Current node is " + ll.head.data);
+            inputHandler(ll);
+        }
+
+        if ("readNext".equals(input)) {
+            System.out.println("Next node is " + ll.head.next.data);
             inputHandler(ll);
         }
     }
